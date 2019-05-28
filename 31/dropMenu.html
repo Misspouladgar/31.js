@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        body {
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .sidenav {
+            height: 100%;
+            width: 200px;
+            position: fixed;
+            z-index: 1;
+            top: 0;
+            left: 0;
+            background-color: #111;
+            overflow: hidden;
+            padding-top: 20px;
+        }
+
+        .dropdown-btn,
+        .sidenav a {
+            padding: 6px 8px 6px 16px;
+            text-decoration: none;
+            color: white;
+            display: block;
+            border: none;
+            background: none;
+            width: 100%;
+            text-align: left;
+            cursor: pointer;
+        }
+
+        .sidenav a:hover,
+        .dropdown-btn:hover {
+            color: #94b6bb;
+            /* lightgray بجای رنگ بالا */
+        }
+
+        .active {
+            background-color: green;
+            color: white;
+        }
+
+        .dropdown-container {
+            display: none;
+            background: #262626;
+            padding-left: 8px;
+        }
+
+        .dropdown-btn {
+            position: relative;
+        }
+
+        .fa-caret-down {
+            position: absolute;
+            right: 8px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="sidenav">
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#clients">Clients</a>
+        <a href="#contanct">Contanct</a>
+        <button class="dropdown-btn">more
+            <i class="fa fa-caret-down" aria-hidden="true"></i>
+        </button>
+        <div class="dropdown-container">
+            <a href="#">Link 1</a>
+            <a href="#">Link 2</a>
+            <a href="#">Link 3</a>
+        </div>
+
+        <a href="#contact">Search</a>
+    </div>
+
+    <script>
+        var dropdown=document.getElementsByClassName("dropdown-btn");
+        var i;
+        // console.log(dropdown);
+        for(i=0; i<dropdown.length; i++){
+            dropdown[i].addEventListener("click", function(){
+                this.classList.toggle("active");
+                var dropdownContent= this.nextElementSibling;
+                // console.log(dropdownContent);
+                if(dropdownContent.style.display==="block"){
+                    dropdownContent.style.display="none";
+                }else{
+                    dropdownContent.style.display="block";
+                }
+            });
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("button").click(function () {
+                // $("[href]").hide();
+                $("[target!='_blank']").hide();
+
+            });
+        });
+    </script>
+</head>
+<body>
+    <a href="_blank">link</a> <br>
+    <a href="">link</a>
+
+    <a target="http://omidlak.ir">link</a>
+        <button>click me!</button>
+
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script>
+        $(document).ready(function () {
+            // $("p").click(function(){
+            $("p").mousemove(function () {
+                $(this).css("font-weight", "bolder");
+            });
+            $("p").mouseleave(function () {
+                $(this).css("font-weight", "normal");
+            });
+            // $("p").mousedown(function () {
+            //     $(this).css("font-weight", "bolder");
+            // });
+            // $("p").mouseup(function () {
+            //     $(this).css("font-weight", "normal");
+            // });
+        });
+    </script>
+</head>
+
+<body>
+    <p>01.Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo voluptas soluta illo dolor repellat quos sit.
+        Aspernatur animi fugit quaerat, perspiciatis esse eius ad neque asperiores sed laboriosam dolor non.</p>
+    <p>02.Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo voluptas soluta illo dolor repellat quos sit.
+        Aspernatur animi fugit quaerat, perspiciatis esse eius ad neque asperiores sed laboriosam dolor non.</p>
+    <p>03.Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo voluptas soluta illo dolor repellat quos sit.
+        Aspernatur animi fugit quaerat, perspiciatis esse eius ad neque asperiores sed laboriosam dolor non.</p>
+    <p>04.Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo voluptas soluta illo dolor repellat quos sit.
+        Aspernatur animi fugit quaerat, perspiciatis esse eius ad neque asperiores sed laboriosam dolor non.</p>
+</body>
+
+</html>
